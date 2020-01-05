@@ -43,11 +43,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3</version>
-		</dependency>
+		</dependency>-->
 		<!--<dependency> <groupId>com.microsoft.sqlserver</groupId> <artifactId>mssql-jdbc</artifactId> 
 			</dependency> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jdbc</artifactId> 
 			</dependency> -->
@@ -66,6 +66,22 @@
 			<version>2.1.0</version>
 		</dependency>
 	</dependencies>
+	<build>
+       <plugins>
+          <plugin>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-maven-plugin</artifactId>
+             <version>2.1.5.RELEASE</version>
+             <executions>
+                <execution>
+                <goals>
+                <goal>repackage</goal>
+                </goals>
+                </execution>
+             </executions>
+          </plugin>
+       </plugins>
+	</build>
 <!-- 
 	<build>
 		<plugins>
