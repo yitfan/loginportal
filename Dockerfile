@@ -1,6 +1,7 @@
 FROM adoptopenjdk/maven-openjdk8 as build
+COPY src /app
+COPY pom.xml /app  
 WORKDIR /app
-COPY --from=clone /app/loginportal /app
 RUN mvn install
 
 FROM openjdk:8-jre-alpine
