@@ -2,7 +2,7 @@ FROM adoptopenjdk/maven-openjdk8 as build
 COPY src /app
 COPY pom.xml /app  
 WORKDIR /app
-RUN mvn install -X
+RUN mvn package
 
 FROM openjdk:8-jre-alpine
 WORKDIR /app
