@@ -19,6 +19,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<docker.image.prefix>springboot</docker.image.prefix>
+		<start-class>com.example.demo.RedisSessionApplication</start-class>
 	</properties>
 
 	<dependencies>
