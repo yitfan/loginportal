@@ -19,7 +19,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<docker.image.prefix>springboot</docker.image.prefix>
-		<start-class>com.example.demo.RedisSessionApplication</start-class>
 	</properties>
 
 	<dependencies>
@@ -72,6 +71,16 @@
           <plugin>
              <groupId>org.springframework.boot</groupId>
              <artifactId>spring-boot-maven-plugin</artifactId>
+             <configuration>
+        		<mainClass>com.example.demo.RedisSessionApplication</mainClass>
+    		</configuration>
+    		<executions>
+        		<execution>
+		            <goals>
+		                <goal>repackage</goal>
+		            </goals>
+        		</execution>
+    		</executions>
           </plugin>
        </plugins>
 	</build>
