@@ -4,7 +4,7 @@ COPY pom.xml /app
 WORKDIR /app
 RUN mvn clean package
 
-FROM openjdk:8-jre-alpine
+FROM openjdk:8-jdk-alpine
 WORKDIR /app
 COPY --from=build /app/target /app
 EXPOSE 8088
