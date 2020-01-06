@@ -9,4 +9,4 @@ WORKDIR /app
 COPY --from=build /app/target /app
 EXPOSE 8088
 ENTRYPOINT ["sh", "-c"]
-CMD ["java -jar loginportal-0.0.1-SNAPSHOT.jar"]
+CMD ["java -cp loginportal-0.0.1-SNAPSHOT.jar com.example.demo.RedisSessionApplication"]
